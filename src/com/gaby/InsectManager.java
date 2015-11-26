@@ -101,10 +101,21 @@ object in the list is a Bee.
 This example uses generic types to make the LinkedList only 
 able to store Insect objects. Please see the Data Types lab 
 for more information and examples on generic types.*/
+ A Monarch butterfly has 6 legs, 4 wings, it is orange and black, 
+and likes a plant called milkweed.
 
 
 package com.gaby;
 
 public class InsectManager {
 
+	public static void Main(String[] args){
+		
+		//A Monarch butterfly has 6 legs, 4 wings, it is orange and black, 
+		//and likes a plant called milkweed.
+		Butterfly monarch = new Butterfly();
+		//A Common Yellow Swallowtail butterfly has 6 legs, 4 wings, it is yellow and black, 
+		//and likes a plant called milk parsley.
+		Butterfuly commonYellowSwallowtail = new Butterfly();
+	}
 }
