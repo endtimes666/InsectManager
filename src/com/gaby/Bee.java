@@ -8,7 +8,7 @@ all of the data for a Bee species. This method has the same name
 as the Butterfly method, but prints out the Bee information. 
 As it prints out the information, it should print “This bee does make honey” 
 or “this bee does not make honey” instead of “true” or “false”.
-*/
+ */
 
 package com.gaby;
 
@@ -17,21 +17,27 @@ public class Bee extends Insect {
 	private String color;
 	private boolean makesHoney;
 	private String favoriteFlower;
-	
-private Bee(){
-	//constructor to set all the variables a Bee object has. 
-}
 
-protected printSpeciesData(){
-	//that prints out all of the data for a Bee species. This method has the same name 
-	//as the Butterfly method, but prints out the Bee information. 
-	//As it prints out the information, it should print “This bee does make honey” 
-	//or “this bee does not make honey” instead of “true” or “false”.
+	Bee(String name, boolean makesHoney, String favoriteFlower) {
+		super(name, 4);
+		this.makesHoney = makesHoney;
+		this.favoriteFlower = favoriteFlower;
+	}
 
-}
+	public void printSpeciesData() {
+		System.out.println("Name: " + getName());
+		System.out.println("Color: " + getColor());
+		System.out.println("Favorite flower: " + favoriteFlower);
+		if (makesHoney == true) {
+			System.out.println("This bee does make honey");
+		} else {
+			System.out.println("This bee does not make honey.");
+		}
+		System.out.println("");
 
+	}
 
-public String getFavoriteFlower() {
+	public String getFavoriteFlower() {
 		return favoriteFlower;
 	}
 

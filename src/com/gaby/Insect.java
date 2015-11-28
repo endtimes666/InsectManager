@@ -7,23 +7,40 @@ What will you do with the constant? Make it public, or add a get method?*/
 
 package com.gaby;
 
-public class Insect {
+public abstract class Insect {
 
 	private String name;
 	private int numberOfWings;
-	protected int numberOfLegs = 6;
+	protected int numberOfLegs;
 
-	public String getName() {
+	protected Insect(String name, int numberOfWings){
+		this.name = name;
+		this.numberOfWings = numberOfWings;
+		this.numberOfLegs = 6;
+	};
+	
+	protected String getName(){
 		return name;
-	}
-	public void setName(String name) {
+	};
+	
+	
+	protected void setName(String name) {
 		this.name = name;
 	}
-	public int getNumberOfWings() {
-		return numberOfWings;
-	}
-	public void setNumberOfWings(int numberOfWings) {
+
+	protected void setNumberOfWings(int numberOfWings) {
 		this.numberOfWings = numberOfWings;
 	}
-			
+
+	protected int getNumberOfWings() {
+		return numberOfWings;
+	}
+
+	protected int getNumberOfLegs() {
+		return numberOfLegs;
+	};
+	
+	public abstract void printSpeciesData();
+	
+	
 }
